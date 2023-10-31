@@ -1,0 +1,25 @@
+.service-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.service-item {
+    width: 20rem;
+    max-width: 95%;
+}
+
+.service__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.service__price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.service__description {
+    text-align: center;
+}

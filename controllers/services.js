@@ -1,7 +1,7 @@
 const Service = require('../models/service');
 
 exports.getAddService = (req, res, next) => {
-    res.render('add-service', {
+    res.render('admin/add-service', {
         pageTitle: 'Add Service',
         path: '/admin/add-service',
         formCSS: true,
@@ -18,7 +18,7 @@ exports.postAddService = (req, res, next) => {
 
 exports.getServices = (req, res, next) => {
     const services = Service.fetchAll(services => {
-        res.render('shop-services', {
+        res.render('shop/shop-services', {
             servs: services,
             pageTitle: 'Shop Services',
             path: '/shop-services',

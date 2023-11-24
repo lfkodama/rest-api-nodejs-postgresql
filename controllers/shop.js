@@ -1,7 +1,7 @@
 const Product = require('../models/product');
 
 exports.getProducts = (req, res, next) => {
-    const products = Product.fetchAll(products => {   //products é a função de callback
+    Product.fetchAll(products => {   //products é a função de callback
         res.render('shop/product-list', {
             prods: products,
             pageTitle: 'All Products',
@@ -14,7 +14,9 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
     const prodId = req.params.productId;
-    console.log(prodId);
+    Product.findById(prodId, product => {
+        console.log(product);
+    });
     res.redirect('/');
 }
 

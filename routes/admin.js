@@ -1,9 +1,6 @@
 const path = require('path');
 const express = require('express');
-
-
 const adminController = require('../controllers/admin');
-const servicesController = require('../controllers/services');
 
 const router = express.Router();
 
@@ -21,13 +18,6 @@ router.get('/edit-product/:productId', adminController.getEditProduct);
 router.post('/edit-product', adminController.postEditProduct);
 
 router.post('/delete-product', adminController.postDeleteProduct);
-
-
-// /admin/add-service => GET
-router.get('/add-service', servicesController.getAddService);
-
-// /admin/add-service => POST
-router.post('/add-service', servicesController.postAddService);
 
 
 module.exports = router;

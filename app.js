@@ -62,10 +62,15 @@ sequelize
     })        
     .then(user => {
         console.log(user);
+        return user.createCart();
+    })
+    .then(cart => {
         app.listen(3000, () => {
             console.log('Server running on port 3000');
         });
     })
+        
+    
     .catch(err => {
         console.log(err);
     });
